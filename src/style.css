@@ -1,6 +1,53 @@
-h1 {
-    color: #f32020;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    margin-top: 50px;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    /* Couleurs */
+    --color-background: #D8D6CA;
+    --color-surface: #D8D6CA;
+    --color-text: #000000;
+    --color-border: #000000;
+    --color-accent: #7B4A4A;
+
+    /* Typographie */
+    --font-family-base: 'IBM Plex Mono', monospace;
+    --font-weight-thin: 100;
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    /* Espacements */
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-section: 8rem;
+    --layout-max-width: 1200px;
+
+    /* UI */
+    --border-width: 2px;
+    --border-style: solid;
+    --border-default: var(--border-width) var(--border-style) var(--color-border);
+    --rotate-negative: -5deg;
+    --rotate-positive: 5deg;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
