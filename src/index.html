@@ -4,14 +4,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio one-page de Roberto Reyna Leon, développeur Fullstack PHP/Symfony, React et TypeScript.">
+    <title>Portfolio | Roberto Reyna Leon</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1>Portfolio</h1>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a class="site-nav__brand" href="#home">Roberto Reyna Leon</a>
 
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#home">Accueil</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#about">Mon travail</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#projects">Mes projets</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="site-main">
+        <section class="section-home" id="home" aria-labelledby="home-title">
+            <div class="section-home__content">
+                <div class="section-home__intro">
+                    <p class="section-home__subtitle">Développeur Fullstack</p>
+                    <h1 class="section-home__title" id="home-title">PHP/SYMFONY REACT/TYPESCRIPT</h1>
+                </div>
+
+                <div class="section-home__visual">
+                    <div class="section-home__image-group" aria-label="Images d'illustration du portfolio">
+                        <div class="section-home__image-wrapper section-home__image-wrapper--primary">
+                            <img class="section-home__image" src="./assets/home-portrait.jpg" alt="Portrait de Roberto Reyna Leon">
+                        </div>
+
+                        <div class="section-home__image-wrapper section-home__image-wrapper--secondary">
+                            <img class="section-home__image" src="./assets/home-workspace.jpg" alt="Espace de travail de développeur">
+                        </div>
+                    </div>
+
+                    <div class="section-home__name-block section-home__name-block--first-name">ROBERTO</div>
+                    <div class="section-home__name-block section-home__name-block--last-name">REYNA LEON</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-about" id="about" aria-labelledby="about-title">
+            <div class="section-about__content">
+                <div class="section-about__visual">
+                    <div class="section-about__image-wrapper">
+                        <img class="section-about__image" src="./assets/about-work.jpg" alt="Interface web en cours de développement">
+                    </div>
+
+                    <h2 class="section-about__title" id="about-title">MON TRAVAIL</h2>
+                </div>
+
+                <div class="section-about__text-content">
+                    <p class="section-about__paragraph">
+                        Je conçois des interfaces web claires, performantes et accessibles, avec une attention particulière portée à l'expérience utilisateur et à la qualité du code.
+                    </p>
+                    <p class="section-about__paragraph">
+                        Ma stack principale associe PHP, Symfony, API Platform, React et TypeScript pour construire des applications robustes, maintenables et adaptées aux besoins métier.
+                    </p>
+                    <p class="section-about__paragraph">
+                        J'avance avec une méthodologie structurée : compréhension du besoin, architecture propre, intégration responsive, tests ciblés et amélioration continue.
+                    </p>
+                    <p class="section-about__paragraph">
+                        Je collabore avec des équipes, indépendants et entreprises qui souhaitent transformer une idée en produit web fiable, lisible et prêt à évoluer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-projects" id="projects" aria-labelledby="projects-title">
+            <div class="section-projects__header">
+                <h2 class="section-projects__title" id="projects-title">MES PROJETS</h2>
+            </div>
+
+            <div class="section-projects__grid">
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="./assets/project-vite-gourmand.jpg" alt="Aperçu de l'application e-commerce Vite & Gourmand">
+                    </div>
+
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Vite &amp; Gourmand - Application E-Commerce</h3>
+                        <p class="project-card__subtitle">API REST Symfony 7.4 &amp; API Platform 3 | Front-end React &amp; TypeScript</p>
+                        <p class="project-card__description">
+                            Plateforme e-commerce complète dédiée à la restauration rapide, intégrant un catalogue produit, un parcours de commande fluide, une gestion panier et une architecture API-first.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="./assets/project-dashboard.jpg" alt="Aperçu d'un tableau de bord d'administration">
+                    </div>
+
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Dashboard Admin - Gestion Métier</h3>
+                        <p class="project-card__subtitle">Symfony UX | Doctrine ORM | Twig | JavaScript moderne</p>
+                        <p class="project-card__description">
+                            Interface d'administration orientée productivité, pensée pour visualiser les données clés, gérer les ressources métier et simplifier les actions quotidiennes des utilisateurs internes.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="./assets/project-portfolio.jpg" alt="Aperçu d'un portfolio éditorial brutaliste">
+                    </div>
+
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Portfolio One-Page - Identité Digitale</h3>
+                        <p class="project-card__subtitle">HTML5 sémantique | CSS moderne | Accessibilité W3C</p>
+                        <p class="project-card__description">
+                            Site personnel conçu comme une page éditoriale minimaliste, avec une structure accessible, une hiérarchie claire et une direction artistique brutaliste centrée sur le contenu.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-contact" id="contact" aria-labelledby="contact-title">
+            <div class="section-contact__content">
+                <div class="section-contact__visual">
+                    <div class="section-contact__image-wrapper">
+                        <img class="section-contact__image" src="./assets/contact.jpg" alt="Bureau avec ordinateur portable et carnet de notes">
+                    </div>
+
+                    <h2 class="section-contact__title" id="contact-title">CONTACTEZ-MOI</h2>
+                </div>
+
+                <address class="section-contact__details">
+                    <ul class="section-contact__list">
+                        <li class="section-contact__item">
+                            <span class="section-contact__label">Mail</span>
+                            <a class="section-contact__link" href="mailto:contact@robertoreynaleon.com">contact@robertoreynaleon.com</a>
+                        </li>
+                        <li class="section-contact__item">
+                            <span class="section-contact__label">Téléphone</span>
+                            <a class="section-contact__link" href="tel:+33000000000">+33 0 00 00 00 00</a>
+                        </li>
+                        <li class="section-contact__item">
+                            <span class="section-contact__label">LinkedIn</span>
+                            <a class="section-contact__link" href="https://www.linkedin.com/in/roberto-reyna-leon" target="_blank" rel="noopener noreferrer">linkedin.com/in/roberto-reyna-leon</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__copyright">&copy; 2026 Roberto Reyna Leon. Tous droits réservés.</p>
+    </footer>
 </body>
 
 </html>
