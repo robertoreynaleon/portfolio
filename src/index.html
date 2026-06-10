@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <header class="site-header">
         <nav class="site-nav" aria-label="Navigation principale">
 
@@ -32,7 +34,7 @@
         </nav>
     </header>
 
-    <main class="site-main">
+    <main class="site-main" id="main-content" tabindex="-1">
         <section class="section-home" id="home" aria-labelledby="home-title">
             <div class="section-home__content">
                 <div class="section-home__intro">
@@ -41,9 +43,9 @@
                 </div>
 
                 <div class="section-home__visual">
-                    <div class="section-home__image-group" aria-label="Images d'illustration du portfolio">
+                    <div class="section-home__image-group" aria-hidden="true">
                         <div class="section-home__image-wrapper section-home__image-wrapper--primary">
-                            <img class="section-home__image" src="./images/00.webp" alt="Portrait de Roberto Reyna Leon">
+                            <img class="section-home__image" src="./images/00.webp" alt="">
                         </div>
                     </div>
 
