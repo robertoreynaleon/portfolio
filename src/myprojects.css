@@ -27,7 +27,7 @@
     border: var(--border-default);
     background-color: var(--color-surface);
     color: var(--color-text);
-    font-size: clamp(3.35rem, 6vw, 6rem);
+    font-size: clamp(2.25rem, 4vw, 4rem);
     font-weight: var(--font-weight-extra-light);
     line-height: 0.95;
     text-transform: uppercase;
@@ -102,6 +102,7 @@
     font-size: clamp(0.72rem, 0.86vw, 0.82rem);
     font-weight: var(--font-weight-regular);
     line-height: 1.18;
+    text-align: justify;
 }
 
 .project-card__description + .project-card__description {

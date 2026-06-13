@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Section Contact / Layout global
+   ========================================================================== */
+
+.section-contact {
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.section-contact__content {
+    display: grid;
+    grid-template-columns: minmax(0, 61%) minmax(22rem, 39%);
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* ==========================================================================
+   Section Contact / Photo et label
+   ========================================================================== */
+
+.section-contact__visual {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.section-contact__image-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: clamp(6rem, 10.9vw, 9.9rem);
+    width: min(44vw, 39.6rem);
+    height: 100%;
+    overflow: hidden;
+}
+
+.section-contact__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: grayscale(100%) contrast(105%) brightness(108%);
+}
+
+.section-contact__label {
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.18em;
+    width: max-content;
+    max-width: min(86vw, 43rem);
+    padding: 0.12em 0.32em 0.18em;
+    border: var(--border-default);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: clamp(2.15rem, 4.15vw, 3.75rem);
+    font-weight: var(--font-weight-extra-light);
+    line-height: 0.95;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: translateX(-50%) rotate(var(--rotate-negative));
+}
+
+.section-contact__label-word--strong {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   Section Contact / Coordonnees
+   ========================================================================== */
+
+.section-contact__details {
+    align-self: start;
+    padding: clamp(5rem, 7vh, 12.5rem) clamp(2rem, 5vw, 5rem) var(--space-lg) clamp(0.1rem, 0.1vw, 1.75rem);
+    font-style: normal;
+}
+
+.section-contact__list {
+    display: grid;
+    gap: 2rem;
+    list-style: none;
+}
+
+.section-contact__item {
+    display: grid;
+    gap: 0.15rem;
+}
+
+.section-contact__item-label,
+.section-contact__link {
+    color: var(--color-text);
+    font-size: clamp(1.15rem, 1.75vw, 1.55rem);
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.section-contact__item-label {
+    font-weight: var(--font-weight-bold);
+}
+
+.section-contact__link {
+    width: fit-content;
+    font-weight: var(--font-weight-regular);
+}
+
+.section-contact__link:hover,
+.section-contact__link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.section-contact__link:focus-visible {
+    outline: 3px solid var(--color-text);
+    outline-offset: 0.3rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    margin: 0;
+    padding: 0.75rem var(--space-sm);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Section Contact / Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .section-contact {
+        min-height: clamp(39rem, 88vh, 54rem);
+    }
+
+    .section-contact__content {
+        position: relative;
+        display: block;
+        min-height: clamp(39rem, 88vh, 54rem);
+    }
+
+    .section-contact__visual {
+        position: absolute;
+        inset: 0;
+        min-height: 0;
+    }
+
+    .section-contact__image-wrapper {
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        width: min(66vw, 25rem);
+        height: 100%;
+    }
+
+    .section-contact__image {
+        opacity: 0.48;
+        object-position: center center;
+    }
+
+    .section-contact__details {
+        position: relative;
+        z-index: 2;
+        width: min(72vw, 32rem);
+        margin-left: auto;
+        padding: clamp(6rem, 15vh, 9rem) clamp(2rem, 8vw, 4rem) var(--space-lg) var(--space-sm);
+        text-align: right;
+    }
+
+    .section-contact__list {
+        gap: 1.5rem;
+    }
+
+    .section-contact__item-label,
+    .section-contact__link {
+        font-size: clamp(1rem, 3.3vw, 1.35rem);
+    }
+
+    .section-contact__link {
+        justify-self: end;
+    }
+
+    .section-contact__label {
+        top: clamp(23rem, 54vh, 30rem);
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        max-width: calc(100vw - 2rem);
+        font-size: clamp(2rem, 8vw, 3.6rem);
+        transform: translateX(-50%) rotate(var(--rotate-negative));
+    }
+}
+
+@media (max-width: 560px) {
+    .section-contact,
+    .section-contact__content {
+        min-height: clamp(37rem, 82vh, 48rem);
+    }
+
+    .section-contact__image-wrapper {
+        width: min(72vw, 22rem);
+    }
+
+    .section-contact__image {
+        opacity: 0.42;
+    }
+
+    .section-contact__details {
+        width: min(90vw, 28rem);
+        padding-top: clamp(5rem, 12vh, 6.5rem);
+        padding-left: 1rem;
+        padding-right: 3.6rem;
+    }
+
+    .section-contact__link {
+        overflow-wrap: anywhere;
+    }
+
+    .section-contact__label {
+        top: clamp(12rem, 50vh, 31rem);
+        gap: 0.16em;
+        font-size: clamp(1.45rem, 8vw, 2.45rem);
+    }
+}
