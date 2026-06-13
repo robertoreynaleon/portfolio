@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Section About / Layout global
+   ========================================================================== */
+
+.section-about {
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.section-about__content {
+    display: grid;
+    grid-template-columns: minmax(0, 47%) minmax(24rem, 53%);
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* ==========================================================================
+   Section About / Photo et label
+   ========================================================================== */
+
+.section-about__visual {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.section-about__image-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: clamp(1.5rem, 7.4vw, 6.75rem);
+    width: min(34vw, 30.5rem);
+    height: 100%;
+    overflow: hidden;
+}
+
+.section-about__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: grayscale(100%) contrast(105%) brightness(105%);
+}
+
+.section-about__label {
+    position: absolute;
+    top: 6%;
+    left: clamp(12rem, 13vw, 24rem);
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45em;
+    width: max-content;
+    max-width: min(84vw, 41rem);
+    padding: 0.12em 0.45em 0.18em;
+    border: var(--border-default);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: clamp(2.65rem, 4.8vw, 4.75rem);
+    font-weight: var(--font-weight-extra-light);
+    line-height: 0.95;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: rotate(-8deg);
+}
+
+.section-about__label-word--strong {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   Section About / Texte
+   ========================================================================== */
+
+.section-about__text-content {
+    align-self: start;
+    max-width: 54ch;
+    padding: clamp(12rem, 24vh, 18rem) clamp(1.5rem, 4.3vw, 4rem) var(--space-lg) clamp(6rem, 10vw, 2rem);
+    font-size: clamp(1rem, 1.4vw, 1.35rem);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 1.18;
+}
+
+.section-about__paragraph + .section-about__paragraph {
+    margin-top: 1.45em;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   Section About / Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .section-about__content {
+        position: relative;
+        display: block;
+        min-height: clamp(39rem, 87vh, 53.5rem);
+    }
+
+    .section-about__visual {
+        position: absolute;
+        inset: 0;
+        min-height: 0;
+    }
+
+    .section-about__image-wrapper {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: min(62vw, 25rem);
+        height: 100%;
+    }
+
+    .section-about__image {
+        height: 108%;
+        opacity: 0.62;
+        object-position: center top;
+    }
+
+    .section-about__label {
+        top: 8%;
+        right: auto;
+        left: 50%;
+        font-size: clamp(2rem, 7vw, 3.7rem);
+        transform: translateX(-50%) rotate(var(--rotate-negative));
+    }
+
+    .section-about__text-content {
+        position: relative;
+        z-index: 2;
+        width: min(74vw, 34rem);
+        max-width: none;
+        padding: clamp(7rem, 14vh, 9rem) var(--space-sm) var(--space-lg);
+        font-size: clamp(0.9rem, 2.45vw, 1.15rem);
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 560px) {
+    .section-about__content {
+        min-height: clamp(41.5rem, 96vh, 53.5rem);
+    }
+
+    .section-about__image-wrapper {
+        width: min(66vw, 22rem);
+    }
+
+    .section-about__image {
+        height: 108%;
+        opacity: 0.45;
+    }
+
+    .section-about__label {
+        top: 5%;
+        right: auto;
+        left: 50%;
+        gap: 0.35em;
+        max-width: calc(100vw - 1rem);
+        font-size: clamp(1.55rem, 8.2vw, 2.65rem);
+        transform: translateX(-50%) rotate(var(--rotate-negative));
+    }
+
+    .section-about__text-content {
+        width: min(86vw, 29rem);
+        padding-top: clamp(6.5rem, 15vh, 8rem);
+        padding-right: 2.5rem;
+        padding-left: 2rem;
+        font-size: clamp(0.78rem, 3.25vw, 0.98rem);
+        line-height: 1.18;
+    }
+
+    .section-about__paragraph + .section-about__paragraph {
+        margin-top: 1.2em;
+    }
+}
