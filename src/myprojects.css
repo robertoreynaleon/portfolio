@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Section Projects / Layout global
+   ========================================================================== */
+
+.section-projects {
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.section-projects__header {
+    display: flex;
+    justify-content: center;
+    padding: clamp(2.75rem, 4.6vh, 3.5rem) var(--space-sm) clamp(2.25rem, 4.2vh, 3rem);
+}
+
+.section-projects__label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    width: max-content;
+    max-width: min(82vw, 43.75rem);
+    padding: 0.18em 0.44em 0.24em;
+    border: var(--border-default);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: clamp(3.35rem, 6vw, 6rem);
+    font-weight: var(--font-weight-extra-light);
+    line-height: 0.95;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.section-projects__label-word--strong {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   Section Projects / Grille
+   ========================================================================== */
+
+.section-projects__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(2.25rem, 3.4vw, 3.1rem);
+    width: 100%;
+    padding: 0 clamp(3.5rem, 4vw, 4rem) clamp(2rem, 3.4vh, 3rem);
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-card__image-wrapper {
+    width: 100%;
+    aspect-ratio: 408 / 292;
+    overflow: hidden;
+    background-color: var(--color-surface);
+}
+
+.project-card__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: grayscale(35%) contrast(105%) brightness(88%);
+}
+
+/* ==========================================================================
+   Section Projects / Contenu des cartes
+   ========================================================================== */
+
+.project-card__content {
+    padding-top: 1.15rem;
+}
+
+.project-card__title {
+    max-width: 24ch;
+    font-size: clamp(1rem, 1.55vw, 1.35rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.18;
+}
+
+.project-card__title strong {
+    font-weight: var(--font-weight-bold);
+}
+
+.project-card__subtitle {
+    margin-top: 0.9rem;
+    color: var(--color-accent);
+    font-size: clamp(0.86rem, 1.15vw, 1rem);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 1.35;
+}
+
+.project-card__description {
+    margin-top: 0.8rem;
+    font-size: clamp(0.72rem, 0.86vw, 0.82rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.18;
+}
+
+.project-card__description + .project-card__description {
+    margin-top: 0.15rem;
+}
+
+/* ==========================================================================
+   Section Projects / Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .section-projects {
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .section-projects__header {
+        padding: clamp(2.25rem, 6vh, 3.5rem) var(--space-sm) clamp(1.75rem, 4vh, 2.5rem);
+    }
+
+    .section-projects__label {
+        max-width: calc(100vw - 2rem);
+        font-size: clamp(2.35rem, 10vw, 4.25rem);
+    }
+
+    .section-projects__grid {
+        grid-template-columns: 1fr;
+        gap: 2.75rem;
+        padding: 0 var(--space-sm) var(--space-lg);
+    }
+
+    .project-card {
+        width: min(100%, 38rem);
+        margin-inline: auto;
+    }
+
+    .project-card__title {
+        max-width: none;
+        font-size: clamp(1.15rem, 4vw, 1.45rem);
+    }
+
+    .project-card__subtitle {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    .project-card__description {
+        font-size: clamp(0.78rem, 2.6vw, 0.92rem);
+        line-height: 1.25;
+    }
+}
+
+@media (max-width: 560px) {
+    .section-projects__header {
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .section-projects__label {
+        gap: 0.35em;
+        font-size: clamp(1.85rem, 10.2vw, 3rem);
+    }
+
+    .section-projects__grid {
+        gap: 2.35rem;
+        padding-bottom: 3rem;
+    }
+}

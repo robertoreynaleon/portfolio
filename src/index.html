@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./myprojects.css">
     <script src="./script.js" defer></script>
 </head>
 
@@ -92,48 +93,60 @@
 
         <section class="section-projects" id="projects" aria-labelledby="projects-title">
             <div class="section-projects__header">
-                <h2 class="section-projects__title" id="projects-title">MES PROJETS</h2>
+                <h2 class="section-projects__label" id="projects-title">
+                    <span class="section-projects__label-word section-projects__label-word--strong">MES</span>
+                    <span class="section-projects__label-word">PROJETS</span>
+                </h2>
             </div>
 
             <div class="section-projects__grid">
                 <article class="project-card">
                     <div class="project-card__image-wrapper">
-                        <img class="project-card__image" src="./assets/project-vite-gourmand.jpg" alt="Aperçu de l'application e-commerce Vite & Gourmand">
+                        <img class="project-card__image" src="./images/02.webp" alt="Aperçu technique du projet Vite et Gourmand">
                     </div>
 
                     <div class="project-card__content">
-                        <h3 class="project-card__title">Vite &amp; Gourmand - Application E-Commerce</h3>
+                        <h3 class="project-card__title">Vite &amp; Gourmand - Application <strong>E-Commerce</strong> de Commande Traiteur</h3>
                         <p class="project-card__subtitle">API REST Symfony 7.4 &amp; API Platform 3 | Front-end React &amp; TypeScript</p>
                         <p class="project-card__description">
-                            Plateforme e-commerce complète dédiée à la restauration rapide, intégrant un catalogue produit, un parcours de commande fluide, une gestion panier et une architecture API-first.
+                            API REST performante avec Symfony et API Platform 3, consommée par un front-end moderne en React et TypeScript. L'application intègre une gestion des rôles, un tableau de statistiques dynamiques, un flux d'automatisation d'e-mails transactionnels et une architecture de données structurée.
+                        </p>
+                        <p class="project-card__description">
+                            Sécurité renforcée avec validation double niveau, authentification par tokens JWT, protection contre les failles XSS et injections via EventSubscriber.
                         </p>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-card__image-wrapper">
-                        <img class="project-card__image" src="./assets/project-dashboard.jpg" alt="Aperçu d'un tableau de bord d'administration">
+                        <img class="project-card__image" src="./images/05.webp" alt="Aperçu technique du projet EcoRide">
                     </div>
 
                     <div class="project-card__content">
-                        <h3 class="project-card__title">Dashboard Admin - Gestion Métier</h3>
-                        <p class="project-card__subtitle">Symfony UX | Doctrine ORM | Twig | JavaScript moderne</p>
+                        <h3 class="project-card__title">EcoRide - Application <strong>Mobilité</strong> de Covoiturage</h3>
+                        <p class="project-card__subtitle">API REST Symfony 7.4 &amp; API Platform 3 | Front-end React &amp; TypeScript</p>
                         <p class="project-card__description">
-                            Interface d'administration orientée productivité, pensée pour visualiser les données clés, gérer les ressources métier et simplifier les actions quotidiennes des utilisateurs internes.
+                            Plateforme de covoiturage pensée pour gérer les trajets, les profils utilisateurs, les avis clients et les recherches dynamiques. L'interface consomme une API structurée et maintenable, avec une logique claire entre les espaces client et administrateur.
+                        </p>
+                        <p class="project-card__description">
+                            Implémentation d'un calcul de frais de livraison avec géocodage, sécurisation des échanges et traitement fiable des données métier.
                         </p>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-card__image-wrapper">
-                        <img class="project-card__image" src="./assets/project-portfolio.jpg" alt="Aperçu d'un portfolio éditorial brutaliste">
+                        <img class="project-card__image" src="./images/06.webp" alt="Aperçu technique du projet Job Board">
                     </div>
 
                     <div class="project-card__content">
-                        <h3 class="project-card__title">Portfolio One-Page - Identité Digitale</h3>
-                        <p class="project-card__subtitle">HTML5 sémantique | CSS moderne | Accessibilité W3C</p>
+                        <h3 class="project-card__title">Vite &amp; Gourmand - Application <strong>Job Board</strong> de Recrutement</h3>
+                        <p class="project-card__subtitle">API REST Symfony 7.4 &amp; API Platform 3 | Front-end React &amp; TypeScript</p>
                         <p class="project-card__description">
-                            Site personnel conçu comme une page éditoriale minimaliste, avec une structure accessible, une hiérarchie claire et une direction artistique brutaliste centrée sur le contenu.
+                            Application de recrutement avec publication d'offres, gestion des candidatures et organisation des profils par rôle. Le projet met l'accent sur la lisibilité des parcours, la clarté des données et une intégration front-end fluide.
+                        </p>
+                        <p class="project-card__description">
+                            Architecture API-first, contrôles de sécurité côté client et serveur, et composants React pensés pour rester réutilisables dans une interface évolutive.
                         </p>
                     </div>
                 </article>
