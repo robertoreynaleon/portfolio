@@ -47,7 +47,7 @@
 
 .section-about__label {
     position: absolute;
-    top: 6%;
+    top: 15%;
     left: clamp(12rem, 13vw, 24rem);
     z-index: 5;
     display: inline-flex;

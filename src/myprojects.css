@@ -13,7 +13,7 @@
 .section-projects__header {
     display: flex;
     justify-content: center;
-    padding: clamp(2.75rem, 4.6vh, 3.5rem) var(--space-sm) clamp(2.25rem, 4.2vh, 3rem);
+    padding: clamp(6.5rem, 12vh, 9rem) var(--space-sm) clamp(2.25rem, 4.2vh, 3rem);
 }
 
 .section-projects__label {

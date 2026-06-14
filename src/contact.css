@@ -81,7 +81,7 @@
 
 .section-contact__details {
     align-self: start;
-    padding: clamp(5rem, 7vh, 12.5rem) clamp(2rem, 5vw, 5rem) var(--space-lg) clamp(0.1rem, 0.1vw, 1.75rem);
+    padding: clamp(7rem, 11vh, 13.5rem) clamp(2rem, 5vw, 5rem) var(--space-lg) clamp(0.1rem, 0.1vw, 1.75rem);
     font-style: normal;
 }
 
