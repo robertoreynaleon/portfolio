@@ -1,0 +1,65 @@
+[
+  {
+    "id": "vite-gourmand-ecommerce",
+    "title": "Vite & Gourmand - Application E-Commerce de Commande Traiteur",
+    "highlight": "E-Commerce",
+    "subtitle": "API REST Symfony 7.4 & API Platform 3 | Front-end React & TypeScript",
+    "descriptions": [
+      "API REST performante avec Symfony et API Platform 3, consommée par un front-end moderne en React et TypeScript. L'application intègre une gestion des rôles, un tableau de statistiques dynamiques, un flux d'automatisation d'e-mails transactionnels et une architecture de données structurée.",
+      "Sécurité renforcée avec validation double niveau, authentification par tokens JWT, protection contre les failles XSS et injections via EventSubscriber."
+    ],
+    "image": "./images/vite-gourmand.png",
+    "imageAlt": "Aperçu technique du projet Vite et Gourmand",
+    "technologies": [
+      "Symfony",
+      "API Platform",
+      "React",
+      "TypeScript",
+      "JWT"
+    ],
+    "siteUrl": "https://vitegourmand-frontend.vercel.app/",
+    "githubUrl": "https://github.com/robertoreynaleon/vitegourmand-frontend"
+  },
+  {
+    "id": "ecoride-covoiturage",
+    "title": "EcoRide - Application Mobilité de Covoiturage",
+    "highlight": "Mobilité",
+    "subtitle": "API REST Symfony 7.4 & API Platform 3 | Front-end React & TypeScript",
+    "descriptions": [
+      "Plateforme de covoiturage pensée pour gérer les trajets, les profils utilisateurs, les avis clients et les recherches dynamiques. L'interface consomme une API structurée et maintenable, avec une logique claire entre les espaces client et administrateur.",
+      "Implémentation d'un calcul de frais de livraison avec géocodage, sécurisation des échanges et traitement fiable des données métier."
+    ],
+    "image": "./images/vite-gourmand.png",
+    "imageAlt": "Aperçu technique du projet EcoRide",
+    "technologies": [
+      "Symfony",
+      "API Platform",
+      "React",
+      "TypeScript",
+      "Géocodage"
+    ],
+    "siteUrl": "",
+    "githubUrl": ""
+  },
+  {
+    "id": "job-board-recrutement",
+    "title": "Vite & Gourmand - Application Job Board de Recrutement",
+    "highlight": "Job Board",
+    "subtitle": "API REST Symfony 7.4 & API Platform 3 | Front-end React & TypeScript",
+    "descriptions": [
+      "Application de recrutement avec publication d'offres, gestion des candidatures et organisation des profils par rôle. Le projet met l'accent sur la lisibilité des parcours, la clarté des données et une intégration front-end fluide.",
+      "Architecture API-first, contrôles de sécurité côté client et serveur, et composants React pensés pour rester réutilisables dans une interface évolutive."
+    ],
+    "image": "./images/vite-gourmand.png",
+    "imageAlt": "Aperçu technique du projet Job Board",
+    "technologies": [
+      "Symfony",
+      "API Platform",
+      "React",
+      "TypeScript",
+      "Recrutement"
+    ],
+    "siteUrl": "",
+    "githubUrl": ""
+  }
+]
