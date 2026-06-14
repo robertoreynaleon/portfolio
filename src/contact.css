@@ -113,6 +113,18 @@
     font-weight: var(--font-weight-regular);
 }
 
+.section-contact__copy-message {
+    width: fit-content;
+    margin-top: 0.25rem;
+    border: var(--border-default);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    padding: 0.08em 0.4em 0.12em;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+}
+
 .section-contact__link:hover,
 .section-contact__link:focus-visible {
     text-decoration: underline;
@@ -191,6 +203,10 @@
     }
 
     .section-contact__link {
+        justify-self: end;
+    }
+
+    .section-contact__copy-message {
         justify-self: end;
     }
 
