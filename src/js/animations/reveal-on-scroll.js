@@ -6,6 +6,7 @@
    ========================================================================== */
 
 const revealElements = document.querySelectorAll('[data-reveal]');
+const desktopRevealQuery = window.matchMedia('(min-width: 901px)');
 
 function shouldReduceMotion() {
     return window.portfolioMotion?.shouldReduceMotion() ?? false;
@@ -18,7 +19,9 @@ function prepareRevealElements() {
         element.classList.add('js-reveal');
 
         if (element.dataset.reveal === 'card') {
-            element.style.setProperty('--reveal-delay', `${cardIndex * 120}ms`);
+            const delay = desktopRevealQuery.matches ? cardIndex * 180 : 0;
+
+            element.style.setProperty('--reveal-delay', `${delay}ms`);
             cardIndex += 1;
         }
     });
