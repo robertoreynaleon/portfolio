@@ -6,6 +6,7 @@
    ========================================================================== */
 
 const PROJECTS_JSON_PATH = './data/projets.json';
+const GITHUB_ICON_PATH = './images/icons/github-icon.svg';
 const projectsGrid = document.querySelector('#projects-grid');
 
 function createProjectTitle(project) {
@@ -84,8 +85,33 @@ function createProjectBody(project) {
     return body;
 }
 
+function createGithubLink(project) {
+    if (!project.githubUrl) {
+        return null;
+    }
+
+    const githubLink = document.createElement('a');
+    githubLink.className = 'project-card__github';
+    githubLink.href = project.githubUrl;
+    githubLink.target = '_blank';
+    githubLink.rel = 'noopener noreferrer';
+    githubLink.setAttribute('aria-label', `Voir le code GitHub du projet ${project.title || 'selectionne'}`);
+
+    const githubIcon = document.createElement('img');
+    githubIcon.className = 'project-card__github-icon';
+    githubIcon.src = GITHUB_ICON_PATH;
+    githubIcon.alt = '';
+    githubIcon.setAttribute('aria-hidden', 'true');
+
+    githubLink.appendChild(githubIcon);
+
+    return githubLink;
+}
+
 function createProjectCard(project) {
     const card = document.createElement('article');
+    const githubLink = createGithubLink(project);
+
     card.className = 'project-card';
     card.dataset.reveal = 'card';
 
@@ -94,6 +120,10 @@ function createProjectCard(project) {
     }
 
     card.appendChild(createProjectBody(project));
+
+    if (githubLink) {
+        card.appendChild(githubLink);
+    }
 
     return card;
 }
