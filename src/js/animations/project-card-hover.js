@@ -9,7 +9,10 @@
 
 const projectCards = document.querySelectorAll('.project-card');
 const desktopMediaQuery = window.matchMedia('(min-width: 901px)');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function shouldReduceMotion() {
+    return window.portfolioMotion?.shouldReduceMotion() ?? false;
+}
 
 function createProjectIndicators() {
     projectCards.forEach((card, index) => {
@@ -29,7 +32,7 @@ function createProjectIndicators() {
 }
 
 function activateCard(card) {
-    if (!desktopMediaQuery.matches || prefersReducedMotion.matches) {
+    if (!desktopMediaQuery.matches || shouldReduceMotion()) {
         return;
     }
 
@@ -37,7 +40,7 @@ function activateCard(card) {
 }
 
 function activateCardOnTouch(card) {
-    if (desktopMediaQuery.matches || prefersReducedMotion.matches) {
+    if (desktopMediaQuery.matches || shouldReduceMotion()) {
         return;
     }
 

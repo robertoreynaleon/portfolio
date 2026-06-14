@@ -6,7 +6,10 @@
    ========================================================================== */
 
 const revealElements = document.querySelectorAll('[data-reveal]');
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function shouldReduceMotion() {
+    return window.portfolioMotion?.shouldReduceMotion() ?? false;
+}
 
 function prepareRevealElements() {
     let cardIndex = 0;
@@ -32,7 +35,7 @@ function observeRevealElements() {
         return;
     }
 
-    if (reduceMotion) {
+    if (shouldReduceMotion()) {
         revealWithoutAnimation();
         return;
     }

@@ -93,3 +93,8 @@ body {
         transform: var(--reveal-transform, none);
     }
 }
+
+.has-reduced-motion .js-reveal {
+    opacity: 1;
+    transform: var(--reveal-transform, none);
+}
