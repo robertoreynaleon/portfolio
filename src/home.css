@@ -89,9 +89,14 @@
 }
 
 .site-nav__link:hover,
+.site-nav__link.is-active,
 .site-nav__link:focus-visible {
     text-decoration: underline;
     text-underline-offset: 0.25em;
+}
+
+.site-nav__link.is-active {
+    font-weight: var(--font-weight-medium);
 }
 
 .site-nav__link:focus-visible,
