@@ -168,7 +168,7 @@
     }
 
     .section-projects__header {
-        padding: clamp(2.25rem, 6vh, 3.5rem) var(--space-sm) clamp(1.75rem, 4vh, 2.5rem);
+        padding: clamp(4.5rem, 11vh, 6rem) var(--space-sm) clamp(1.75rem, 4vh, 2.5rem);
     }
 
     .section-projects__label {
@@ -205,7 +205,7 @@
 @media (max-width: 560px) {
     .section-projects__header {
         justify-content: center;
-        padding-top: 2rem;
+        padding-top: 4.25rem;
     }
 
     .section-projects__label {
