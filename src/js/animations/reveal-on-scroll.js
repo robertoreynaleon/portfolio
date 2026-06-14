@@ -5,14 +5,17 @@
    Quand un element entre dans l'ecran, on ajoute la classe is-revealed.
    ========================================================================== */
 
-const revealElements = document.querySelectorAll('[data-reveal]');
 const desktopRevealQuery = window.matchMedia('(min-width: 901px)');
 
 function shouldReduceMotion() {
     return window.portfolioMotion?.shouldReduceMotion() ?? false;
 }
 
-function prepareRevealElements() {
+function getRevealElements(root = document) {
+    return root.querySelectorAll('[data-reveal]:not(.js-reveal)');
+}
+
+function prepareRevealElements(revealElements) {
     let cardIndex = 0;
 
     revealElements.forEach((element) => {
@@ -27,19 +30,19 @@ function prepareRevealElements() {
     });
 }
 
-function revealWithoutAnimation() {
+function revealWithoutAnimation(revealElements) {
     revealElements.forEach((element) => {
         element.classList.add('is-revealed');
     });
 }
 
-function observeRevealElements() {
+function observeRevealElements(revealElements) {
     if (!revealElements.length) {
         return;
     }
 
     if (shouldReduceMotion()) {
-        revealWithoutAnimation();
+        revealWithoutAnimation(revealElements);
         return;
     }
 
@@ -66,5 +69,15 @@ function observeRevealElements() {
     });
 }
 
-prepareRevealElements();
-observeRevealElements();
+function initRevealOnScroll(root = document) {
+    const revealElements = getRevealElements(root);
+
+    prepareRevealElements(revealElements);
+    observeRevealElements(revealElements);
+}
+
+initRevealOnScroll();
+
+document.addEventListener('projects:rendered', (event) => {
+    initRevealOnScroll(event.detail.container);
+});

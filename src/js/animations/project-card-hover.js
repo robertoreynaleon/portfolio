@@ -7,14 +7,17 @@
    et afficher un petit indicateur numerote.
    ========================================================================== */
 
-const projectCards = document.querySelectorAll('.project-card');
 const desktopMediaQuery = window.matchMedia('(min-width: 901px)');
 
 function shouldReduceMotion() {
     return window.portfolioMotion?.shouldReduceMotion() ?? false;
 }
 
-function createProjectIndicators() {
+function getProjectCards(root = document) {
+    return root.querySelectorAll('.project-card');
+}
+
+function createProjectIndicators(projectCards) {
     projectCards.forEach((card, index) => {
         const existingIndicator = card.querySelector('.project-card__indicator');
 
@@ -56,19 +59,26 @@ function resetCardsOnMobile() {
         return;
     }
 
-    projectCards.forEach((card) => {
+    getProjectCards().forEach((card) => {
         deactivateCard(card);
     });
 }
 
-function initProjectCardHover() {
+function initProjectCardHover(root = document) {
+    const projectCards = getProjectCards(root);
+
     if (!projectCards.length) {
         return;
     }
 
-    createProjectIndicators();
+    createProjectIndicators(projectCards);
 
     projectCards.forEach((card) => {
+        if (card.dataset.hoverReady === 'true') {
+            return;
+        }
+
+        card.dataset.hoverReady = 'true';
         card.addEventListener('mouseenter', () => activateCard(card));
         card.addEventListener('mouseleave', () => deactivateCard(card));
         card.addEventListener('pointerdown', () => activateCardOnTouch(card));
@@ -81,3 +91,7 @@ function initProjectCardHover() {
 }
 
 initProjectCardHover();
+
+document.addEventListener('projects:rendered', (event) => {
+    initProjectCardHover(event.detail.container);
+});
