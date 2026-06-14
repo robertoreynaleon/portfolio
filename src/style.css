@@ -51,3 +51,45 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
+
+/* ==========================================================================
+   Animations globales / Apparition au scroll
+   ========================================================================== */
+
+.js-reveal {
+    opacity: 0;
+    transform: var(--reveal-hidden-transform, translateY(1.25rem));
+    transition:
+        opacity 520ms ease,
+        transform 520ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js-reveal[data-reveal="image"] {
+    transform: var(--reveal-hidden-transform, translateY(1rem) scale(0.985));
+}
+
+.js-reveal[data-reveal="label"] {
+    transform: var(--reveal-hidden-transform, translateY(1rem) rotate(-2deg));
+}
+
+.js-reveal.is-revealed {
+    opacity: 1;
+    transform: var(--reveal-transform, none);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .js-reveal {
+        opacity: 1;
+        transform: var(--reveal-transform, none);
+    }
+}

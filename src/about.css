@@ -65,7 +65,9 @@
     line-height: 0.95;
     text-transform: uppercase;
     white-space: nowrap;
-    transform: rotate(-8deg);
+    --reveal-transform: rotate(-8deg);
+    --reveal-hidden-transform: translateY(1rem) rotate(-10deg);
+    transform: var(--reveal-transform);
 }
 
 .section-about__label-word--strong {
@@ -127,7 +129,9 @@
         right: auto;
         left: 50%;
         font-size: clamp(2rem, 7vw, 3.7rem);
-        transform: translateX(-50%) rotate(var(--rotate-negative));
+        --reveal-transform: translateX(-50%) rotate(var(--rotate-negative));
+        --reveal-hidden-transform: translateX(-50%) translateY(1rem) rotate(-7deg);
+        transform: var(--reveal-transform);
     }
 
     .section-about__text-content {
@@ -162,7 +166,9 @@
         gap: 0.35em;
         max-width: calc(100vw - 1rem);
         font-size: clamp(1.55rem, 8.2vw, 2.65rem);
-        transform: translateX(-50%) rotate(var(--rotate-negative));
+        --reveal-transform: translateX(-50%) rotate(var(--rotate-negative));
+        --reveal-hidden-transform: translateX(-50%) translateY(1rem) rotate(-7deg);
+        transform: var(--reveal-transform);
     }
 
     .section-about__text-content {

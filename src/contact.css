@@ -66,7 +66,9 @@
     line-height: 0.95;
     text-transform: uppercase;
     white-space: nowrap;
-    transform: translateX(-50%) rotate(var(--rotate-negative));
+    --reveal-transform: translateX(-50%) rotate(var(--rotate-negative));
+    --reveal-hidden-transform: translateX(-50%) translateY(1rem) rotate(-7deg);
+    transform: var(--reveal-transform);
 }
 
 .section-contact__label-word--strong {
@@ -199,7 +201,9 @@
         left: 50%;
         max-width: calc(100vw - 2rem);
         font-size: clamp(2rem, 8vw, 3.6rem);
-        transform: translateX(-50%) rotate(var(--rotate-negative));
+        --reveal-transform: translateX(-50%) rotate(var(--rotate-negative));
+        --reveal-hidden-transform: translateX(-50%) translateY(1rem) rotate(-7deg);
+        transform: var(--reveal-transform);
     }
 }
 

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./contact.css">
     <script src="./js/animations/header-scroll.js" defer></script>
     <script src="./js/animations/active-navigation.js" defer></script>
+    <script src="./js/animations/reveal-on-scroll.js" defer></script>
 </head>
 
 <body>
@@ -41,20 +42,20 @@
     <main class="site-main" id="main-content" tabindex="-1">
         <section class="section-home" id="home" aria-labelledby="home-title">
             <div class="section-home__content">
-                <div class="section-home__intro">
+                <div class="section-home__intro" data-reveal="text">
                     <p class="section-home__subtitle">Développeur Fullstack</p>
                     <h1 class="section-home__title" id="home-title">PHP/SYMFONY REACT/TYPESCRIPT</h1>
                 </div>
 
                 <div class="section-home__visual">
-                    <div class="section-home__image-group" aria-hidden="true">
+                    <div class="section-home__image-group" aria-hidden="true" data-reveal="image">
                         <div class="section-home__image-wrapper section-home__image-wrapper--primary">
                             <img class="section-home__image" src="./images/00.webp" alt="">
                         </div>
                     </div>
 
-                    <div class="section-home__name-block section-home__name-block--first-name">ROBERTO</div>
-                    <div class="section-home__name-block section-home__name-block--last-name">REYNA LEON</div>
+                    <div class="section-home__name-block section-home__name-block--first-name" data-reveal="label">ROBERTO</div>
+                    <div class="section-home__name-block section-home__name-block--last-name" data-reveal="label">REYNA LEON</div>
                 </div>
             </div>
         </section>
@@ -62,17 +63,17 @@
         <section class="section-about" id="about" aria-labelledby="about-title">
             <div class="section-about__content">
                 <div class="section-about__visual">
-                    <div class="section-about__image-wrapper">
+                    <div class="section-about__image-wrapper" data-reveal="image">
                         <img class="section-about__image" src="./images/01.webp" alt="">
                     </div>
 
-                    <h2 class="section-about__label" id="about-title">
+                    <h2 class="section-about__label" id="about-title" data-reveal="label">
                         <span class="section-about__label-word">MON</span>
                         <span class="section-about__label-word section-about__label-word--strong">TRAVAIL</span>
                     </h2>
                 </div>
 
-                <div class="section-about__text-content">
+                <div class="section-about__text-content" data-reveal="text">
                     <p class="section-about__paragraph">
                         Salut ! Je suis Roberto. Passionné par l'architecture logicielle, je conçois des applications web complètes.
                     </p>
@@ -95,14 +96,14 @@
 
         <section class="section-projects" id="projects" aria-labelledby="projects-title">
             <div class="section-projects__header">
-                <h2 class="section-projects__label" id="projects-title">
+                <h2 class="section-projects__label" id="projects-title" data-reveal="label">
                     <span class="section-projects__label-word section-projects__label-word--strong">MES</span>
                     <span class="section-projects__label-word">PROJETS</span>
                 </h2>
             </div>
 
             <div class="section-projects__grid">
-                <article class="project-card">
+                <article class="project-card" data-reveal="card">
                     <div class="project-card__image-wrapper">
                         <img class="project-card__image" src="./images/02.webp" alt="Aperçu technique du projet Vite et Gourmand">
                     </div>
@@ -119,7 +120,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-reveal="card">
                     <div class="project-card__image-wrapper">
                         <img class="project-card__image" src="./images/05.webp" alt="Aperçu technique du projet EcoRide">
                     </div>
@@ -136,7 +137,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-reveal="card">
                     <div class="project-card__image-wrapper">
                         <img class="project-card__image" src="./images/06.webp" alt="Aperçu technique du projet Job Board">
                     </div>
@@ -158,17 +159,17 @@
         <section class="section-contact" id="contact" aria-labelledby="contact-title">
             <div class="section-contact__content">
                 <div class="section-contact__visual">
-                    <div class="section-contact__image-wrapper">
+                    <div class="section-contact__image-wrapper" data-reveal="image">
                         <img class="section-contact__image" src="./images/04.webp" alt="">
                     </div>
 
-                    <h2 class="section-contact__label" id="contact-title">
+                    <h2 class="section-contact__label" id="contact-title" data-reveal="label">
                         <span class="section-contact__label-word section-contact__label-word--strong">CONTACTEZ-</span>
                         <span class="section-contact__label-word">MOI</span>
                     </h2>
                 </div>
 
-                <address class="section-contact__details">
+                <address class="section-contact__details" data-reveal="text">
                     <ul class="section-contact__list">
                         <li class="section-contact__item">
                             <span class="section-contact__item-label">Mail :</span>
